@@ -8,13 +8,34 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <h2 className="text-2xl font-bold mb-4 md:mb-0">Raagsaaz</h2>
           <div className="flex space-x-6">
-            <FaYoutube size={24} className="hover:text-gray-400 cursor-pointer" />
-            <FaSpotify size={24} className="hover:text-gray-400 cursor-pointer" />
-            <FaInstagram size={24} className="hover:text-gray-400 cursor-pointer" />
+          <a
+              href="https://www.youtube.com/@RaagSaaz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400"
+            >
+              <FaYoutube size={24} />
+            </a>
+            <a
+              href="https://open.spotify.com/artist/yourartistid"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400"
+            >
+              <FaSpotify size={24} />
+            </a>
+            <a
+              href="https://www.instagram.com/raagsaaz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white hover:text-gray-400"
+            >
+              <FaInstagram size={24} />
+            </a>
           </div>
         </div>
         <div className="mt-8 text-center text-gray-400">
-          <p>© 2024 Raagsaaz. All rights reserved.</p>
+          <p>© 2025 Raagsaaz. All rights reserved.</p>
         </div>
       </div>
     </footer>

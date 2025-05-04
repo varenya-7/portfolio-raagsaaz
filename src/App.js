@@ -346,6 +346,8 @@ import Discography from "./components/Discography/Discography";
 import Events from "./components/Events/Events";
 import Footer from "./components/Footer/Footer";
 
+
+
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeSection = useActiveSection();

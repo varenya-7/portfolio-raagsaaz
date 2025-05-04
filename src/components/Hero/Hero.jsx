@@ -6,7 +6,7 @@ const Hero = () => {
     <section id="home" className="min-h-screen relative flex items-center justify-center">
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1501612780327-45045538702b"
+          src="https://ik.imagekit.io/3wtfzxgon/IMG_20231106_210622_563.jpg?updatedAt=1746359060116"
           alt="Band Hero"
           className="w-full h-full object-cover grayscale"
         />

@@ -1,17 +1,23 @@
 export const bandMembers = [
     {
-      name: "John Doe",
+      name: "Varenya Singh",
       instrument: "Lead Vocals",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d"
+      image: "https://ik.imagekit.io/3wtfzxgon/IMG_3098.jpg?updatedAt=1746355372696"
     },
     {
-      name: "Jane Smith",
-      instrument: "Lead Guitar",
-      image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb"
+      name: "Mohd. Aazz",
+      instrument: "Pianist / Bassist",
+      image: "https://ik.imagekit.io/3wtfzxgon/IMG_3080.jpg?updatedAt=1746355372690"
     },
     {
-      name: "Mike Johnson",
-      instrument: "Drums",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+      name: "Padam Sinha",
+      instrument: "Drummer",
+      image: "https://ik.imagekit.io/3wtfzxgon/IMG-20240227-WA0140.jpg?updatedAt=1746356264888"
     },
+    {
+      name: "Yash Anand",
+      instrument: "Lead Guitarist",
+      image: "https://ik.imagekit.io/3wtfzxgon/AN2A3285.JPG?updatedAt=1746355369586"
+    },
+
   ];
