@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { bandMembers } from "../../data/bandMembers";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import BandMemberModal from "./BandMemberModel";
 
 const About = () => {
+  const [selectedMember, setSelectedMember] = useState(null);
+
   return (
-    <section id="about" className="py-20 bg-zinc-900">
+    <section id="about" className="py-20 bg-zinc-800">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +30,7 @@ const About = () => {
           breakpoints={{
             640: { slidesPerView: 2 },
             768: { slidesPerView: 3 },
-            1024: { slidesPerView: 4 }, // Show 4 cards per row on large screens
+            1024: { slidesPerView: 4 },
           }}
         >
           {bandMembers.map((member, index) => (
@@ -37,7 +40,8 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                className="relative group"
+                className="relative group cursor-pointer"
+                onClick={() => setSelectedMember(member)}
               >
                 <div className="overflow-hidden rounded-lg">
                   <img
@@ -54,6 +58,9 @@ const About = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Expanded Modal */}
+        <BandMemberModal member={selectedMember} onClose={() => setSelectedMember(null)} />
       </div>
     </section>
   );
