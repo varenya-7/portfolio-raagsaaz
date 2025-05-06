@@ -4,7 +4,7 @@ import { albums } from "../../data/albums";
 
 const Discography = () => {
   return (
-    <section id="discography" className="py-20 bg-gray-900">
+    <section id="discography" className="py-20 bg-zinc-800">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

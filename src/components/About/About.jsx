@@ -8,7 +8,7 @@ import { Navigation } from "swiper/modules";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-gray-900">
+    <section id="about" className="py-20 bg-zinc-900">
       <div className="container mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ const About = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-[400px] object-cover grayscale group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-[400px] object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent text-white">

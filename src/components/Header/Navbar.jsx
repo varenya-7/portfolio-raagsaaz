@@ -8,7 +8,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection }) => {
         <img
           src="https://ik.imagekit.io/3wtfzxgon/Raagsaaz-Logo.png?updatedAt=1746356381576" // ← Replace with your actual logo URL
           alt="Raagsaaz Logo"
-          className="h-[100px] w-auto object-contain pl-12" // Adjust size as needed
+          className="h-20 w-auto object-contain pl-12" // Adjust size as needed
         />
       </a>
 

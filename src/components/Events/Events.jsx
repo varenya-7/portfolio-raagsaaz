@@ -23,7 +23,7 @@ const Events = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
-              className="bg-gray-900 p-6 rounded-lg flex items-center justify-between group hover:bg-gray-800 transition-colors"
+              className="bg-zinc-800 p-6 rounded-lg flex items-center justify-between group hover:bg-zinc-700 transition-colors"
             >
               <div className="flex items-center space-x-6">
                 <BiCalendar size={24} />

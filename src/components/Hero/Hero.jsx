@@ -6,9 +6,9 @@ const Hero = () => {
     <section id="home" className="min-h-screen relative flex items-center justify-center">
       <div className="absolute inset-0">
         <img
-          src="https://ik.imagekit.io/3wtfzxgon/IMG_20231106_210622_563.jpg?updatedAt=1746359060116"
+          src="https://ik.imagekit.io/3wtfzxgon/IMG_20231106_210051_933.HEIC?updatedAt=1746523937880"
           alt="Band Hero"
-          className="w-full h-full object-cover grayscale"
+          className="w-full h-full object-cover "
         />
       </div>
       <div className="absolute inset-0 bg-black/50" />
