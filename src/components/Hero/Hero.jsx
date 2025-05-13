@@ -37,7 +37,7 @@ const Hero = () => {
           Book Now
         </motion.button>
       </motion.div>
-      {/* {showForm && <BookingForm onClose={() => setShowForm(false)} />} */}
+      {showForm && <BookingForm onClose={() => setShowForm(false)} />}
     </section>
   );
 };
