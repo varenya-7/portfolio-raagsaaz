@@ -337,7 +337,9 @@
 
 
 import React, { useState } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useActiveSection } from "./hooks/useActiveSection";
+
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
@@ -345,10 +347,11 @@ import Media from "./components/Media/Media";
 import Discography from "./components/Discography/Discography";
 import Events from "./components/Events/Events";
 import Footer from "./components/Footer/Footer";
+import BookingForm from "./components/Hero/BookingForm";
+import BookingConfirmation from "./components/Hero/BookingConfirmation";
 
-
-
-const App = () => {
+// Extract your homepage as a separate component
+const HomePage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const activeSection = useActiveSection();
 
@@ -368,5 +371,18 @@ const App = () => {
     </div>
   );
 };
+
+// Single valid App component with routing
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/book" element={<BookingForm />} />
+        <Route path="/confirmation" element={<BookingConfirmation />} />
+      </Routes>
+    </Router>
+  );
+}
 
 export default App;
