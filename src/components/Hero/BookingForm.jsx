@@ -1,9 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-
-
-
 const BookingForm = ({ onClose }) => {
   const navigate = useNavigate();
 
@@ -17,6 +14,7 @@ const BookingForm = ({ onClose }) => {
     <div className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4 min-h-screen">
       <div
         className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-xl shadow-2xl bg-zinc-800"
+         style={{ scrollbarWidth: "none" }}
       
       >
         <div className="absolute inset-0 bg-opacity-60 rounded-xl"></div>
