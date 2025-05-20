@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Discography = () => {
   return (
     <section id="discography" className="py-20 bg-zinc-800">
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-12 font-sans w-fit mx-auto lg:ml-28 lg:-mt-8 tracking-wider bg-gradient-to-r from-sky-400 to-blue-600 bg-clip-text text-transparent leading-[1.3] overflow-visible text-center lg:text-left pb-2">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium mb-12 font-sans w-fit mx-auto lg:ml-28 lg:-mt-8 tracking-wider text-white leading-[1.3]  text-center lg:text-left pb-2 text-bold">
         Raagsaaz's Musical Journey
       </h1>
 
