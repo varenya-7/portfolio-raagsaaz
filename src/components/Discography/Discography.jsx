@@ -21,7 +21,7 @@ const Discography = () => {
               Formation Year
             </h2>
             <p className="text-gray-300 text-lg sm:text-xl text-center lg:text-center lg:me-40">
-              2015: Raagsaaz formed with a vision to{" "}
+              2023: Raagsaaz formed with a vision to{" "}
               <br className="hidden sm:block" />
               blend soulful melodies and vibrant{" "}
               <br className="hidden sm:block" /> rhythms.
@@ -39,11 +39,13 @@ const Discography = () => {
               Top Festival Appearance
             </h2>
             <p className="text-gray-300 text-lg sm:text-xl text-center lg:text-center lg:me-[130px]">
-              2019: Headlined the City Jazz Festival{" "}
+              2024 : Performed at one of Lucknow’s biggest cultural festivals{" "}
               <br className="hidden sm:block" />
-              to rave reviews and growing
+               La Flea Affair 
               <br className="hidden sm:block" />
-              fan base.
+organized by Knocksense , earning significant recognition.
+              <br className="hidden sm:block" />
+
             </p>
           </motion.div>
         </div>
@@ -90,13 +92,14 @@ const Discography = () => {
             transition={{ duration: 1.5, delay: 1 }}
           >
             <h2 className="text-xl sm:text-2xl font-medium text-white mb-2 text-center lg:text-center lg:ml-[200px]">
-              First Album
+              3<sup>rd</sup> Position<br className="hidden sm:block"></br>
+             Battle of Bands , IIT Roorkee 
             </h2>
             <p className="text-gray-300 text-lg sm:text-xl text-center lg:text-center lg:ml-[150px] ">
-              2017: Released debut album "Echoes of
+              2023: Marked entry into music scene by winning{" "}
               <br className="hidden sm:block" />
-              Raags" making their entry into the music{" "}
-              <br className="hidden sm:block" /> scene
+              the first national-level Battle of the Bands competition.{" "}
+              <br className="hidden sm:block" /> 
             </p>
           </motion.div>
 
@@ -111,10 +114,9 @@ const Discography = () => {
               Recent Milestone
             </h2>
             <p className="text-gray-300 text-lg sm:text-xl text-center lg:text-center lg:ml-[150px]">
-              2023: Launched an acoustic tour
+              2025 : 2<sup>nd</sup> runner-up at Battle of Bands Xenium'25
               <br className="hidden sm:block" />
-              connecting deeply with audiences
-              <br className="hidden sm:block" /> nationwide.
+              LPCPS , Lucknow
             </p>
           </motion.div>
         </div>
