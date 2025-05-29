@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const BookingForm = ({ onClose }) => {
   const navigate = useNavigate();
@@ -42,7 +44,14 @@ const BookingForm = ({ onClose }) => {
     const validationErrors = validate(data);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      alert("Please enter the required details.");
+      toast.error("Please enter the required details.", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
       return;
     }
 
@@ -58,6 +67,7 @@ const BookingForm = ({ onClose }) => {
       navigate("/confirmation");
     } catch (error) {
       console.error("Error submitting form:", error);
+      toast.error("Something went wrong. Please try again later.");
     }
   };
 
@@ -220,6 +230,7 @@ const BookingForm = ({ onClose }) => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
