@@ -1,13 +1,33 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const BookingForm = ({ onClose }) => {
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form data here if needed
-    navigate("/confirmation");
+    const formData = new FormData(e.target);
+
+    const data = {
+    eventoccasion: formData.get("eventoccasion"),
+    eventdate: formData.get("eventdate"),
+    eventtime: formData.get("eventtime"),
+    name: formData.get("name"),
+    email: formData.get("email"),
+    phonenumber: formData.get("countrycode") + " " + formData.get("phonenumber"),
+    additionalinformation: formData.get("additionalinformation"),
+    }
+ console.log("postdata--->" , data);
+     try {
+      // console.log("ENDPOINT" , process.env.BACKEND_API_URL);
+       const response = await axios.post(`http://localhost:5000/api/booking/submitform`, data);
+        console.log("Response from server:", response.data);
+        navigate("/confirmation");
+     } catch (error) {
+      console.error("Error submitting form:", error);
+     }
+
   };
 
   return (
@@ -38,7 +58,8 @@ const BookingForm = ({ onClose }) => {
                 I'd like to book this band for a
               </label>
               <select
-                className="w-full border border-white bg-transparent text-white p-3  text-base"
+                name="eventoccasion"
+                className="w-full border border-white bg-transparent text-white p-3  text-base rounded-lg"
                 defaultValue=""
               >
                 <option value="" disabled className="text-black">
@@ -78,14 +99,15 @@ const BookingForm = ({ onClose }) => {
 
               {/* Date and Time */}
               <label className="block text-white font-bold text-lg ms-2">
-                Event Date & Time
+                Event Date
               </label>
               <div className="flex flex-col md:flex-row gap-3">
                 <div className="relative w-full">
                   <input
+                    name="eventdate"
                     id="event-date"
                     type="date"
-                    className="w-full border border-white bg-transparent text-white p-3 pr-12  text-base appearance-none"
+                    className="w-full border border-white bg-transparent text-white p-3 pr-12  text-base appearance-none rounded-lg"
                   />
                   <button
                     type="button"
@@ -112,8 +134,9 @@ const BookingForm = ({ onClose }) => {
                   </button>
                 </div>
 
-                <div className="relative w-full">
+                {/* <div className="relative w-full">
                   <input
+                    name="eventtime"
                     type="time"
                     id="event-time"
                     className="w-full border border-white bg-transparent text-white p-3 pr-12  text-base appearance-none"
@@ -141,17 +164,18 @@ const BookingForm = ({ onClose }) => {
                       />
                     </svg>
                   </button>
-                </div>
+                </div> */}
               </div>
 
               {/* Contact Person */}
               <label className="block text-white font-bold text-lg ms-2">
-                Contact Person
+              Name
               </label>
               <input
+                name="name"
                 type="text"
-                placeholder="Name of Contact Person"
-                className="w-full border border-white bg-transparent text-white placeholder-white p-3  text-base"
+                placeholder="Your Name"
+                className="w-full border border-white bg-transparent text-white placeholder-white p-3  text-base rounded-lg"
               />
 
               {/* Email */}
@@ -176,9 +200,10 @@ const BookingForm = ({ onClose }) => {
                   </svg>
                 </div>
                 <input
+                  name="email"
                   type="email"
                   placeholder="Your Email"
-                  className="w-full border border-white bg-transparent text-white placeholder-white p-3 pl-10  text-base"
+                  className="w-full border border-white bg-transparent text-white placeholder-white p-3 pl-10  text-base rounded-lg"
                 />
               </div>
 
@@ -186,21 +211,20 @@ const BookingForm = ({ onClose }) => {
               <label className="block text-white font-bold text-lg ms-2 mt-4">
                 Phone Number
               </label>
-              <div className="flex w-full">
+              <div className="flex w-full ">
                 <select
-                  className="bg-transparent border border-white text-white  px-3 py-3 appearance-none cursor-pointer max-w-[110px]"
-                  defaultValue="+1"
+                  className="bg-transparent border border-white text-white  px-3 py-3 appearance-none cursor-pointer max-w-[110px] "
+                  defaultValue="+91"
                   aria-label="Country code"
+                  name="countrycode"
                 >
                   <option value="+91" className="text-black">🇮🇳 +91</option>
-                  <option value="+44" className="text-black">🇬🇧 +44</option>
-                  <option value="+61" className="text-black">🇦🇺 +61</option>
-                  <option value="+81" className="text-black">🇯🇵 +81</option>
                 </select>
                 <input
+                  name="phonenumber"
                   type="tel"
                   placeholder="Enter phone number"
-                  className="flex-grow border border-white bg-transparent text-white placeholder-white p-3  text-base"
+                  className="flex-grow border border-white bg-transparent text-white placeholder-white p-3  text-base "
                 />
               </div>
 
@@ -209,6 +233,7 @@ const BookingForm = ({ onClose }) => {
                 Additional Information
               </label>
               <textarea
+                name="additionalinformation"
                 placeholder="Your Message"
                 className="w-full border border-white bg-transparent text-white placeholder-white p-3 rounded-lg text-base"
                 rows="4"
@@ -217,7 +242,7 @@ const BookingForm = ({ onClose }) => {
               {/* Submit */}
               <button
                 type="submit"
-                className="bg-white text-black px-6 py-3  hover:opacity-90 transition-all duration-300 w-full font-semibold text-lg tracking-wide shadow-lg"
+                className="bg-white text-black px-6 py-3  hover:opacity-90 transition-all duration-300 w-full font-semibold text-lg tracking-wide shadow-lg rounded-lg"
               >
                 🎵 Book Now!
               </button>

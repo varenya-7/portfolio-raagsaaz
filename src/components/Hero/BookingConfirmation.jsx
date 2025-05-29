@@ -1,6 +1,5 @@
 import React from "react";
 import { Phone, Mail, MessageSquareText } from "lucide-react";
-
 const BookingConfirmation = () => {
   return (
     <div className="fixed inset-0 bg-black text-white z-50 select-none outline-none">
