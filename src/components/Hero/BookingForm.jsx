@@ -64,7 +64,9 @@ const BookingForm = ({ onClose }) => {
         }
       );
       console.log("Response from server:", response.data);
-      navigate("/confirmation");
+
+      // Redirect to confirmation page with state
+      navigate("/confirmation", { state: { fromBooking: true } });
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Something went wrong. Please try again later.");
