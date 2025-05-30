@@ -344,7 +344,8 @@ import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import About from "./components/About/About";
 import Media from "./components/Media/Media";
-import Discography from "./components/Discography/Discography";
+// import Discography from "./components/Discography/Discography";
+import Timeline from "./components/Timeline/Timeline";
 import Events from "./components/Events/Events";
 import Footer from "./components/Footer/Footer";
 import BookingForm from "./components/Hero/BookingForm";
@@ -365,7 +366,7 @@ const HomePage = () => {
       <Hero />
       <About />
       <Media />
-      <Discography />
+      <Timeline />
       <Events />
       <Footer />
     </div>
