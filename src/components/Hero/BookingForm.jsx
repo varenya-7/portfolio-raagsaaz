@@ -189,7 +189,7 @@ const BookingForm = ({ onClose }) => {
               </label>
               <div className="flex w-full">
                 <select
-                  className="bg-transparent border border-white text-white px-3 py-3 appearance-none cursor-pointer max-w-[110px]"
+                  className="bg-transparent border border-white text-white px-3 py-3 appearance-none cursor-pointer max-w-[110px] rounded"
                   defaultValue="+91"
                   name="countrycode"
                 >
@@ -203,7 +203,7 @@ const BookingForm = ({ onClose }) => {
                   placeholder="Enter phone number"
                   className={`flex-grow ${
                     errors.phonenumber ? "border-red-500" : "border-white"
-                  } border bg-transparent text-white placeholder-white p-3 text-base`}
+                  } border bg-transparent text-white placeholder-white p-3 text-base rounded`}
                 />
               </div>
               {errors.phonenumber && (
@@ -233,6 +233,13 @@ const BookingForm = ({ onClose }) => {
         </div>
       </div>
       <ToastContainer />
+      <style>
+        {`
+    input[type="date"]::-webkit-calendar-picker-indicator {
+      filter: invert(1) brightness(2);
+    }
+  `}
+      </style>
     </div>
   );
 };

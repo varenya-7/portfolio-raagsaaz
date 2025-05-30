@@ -60,8 +60,20 @@ const About = () => {
         </Swiper>
 
         {/* Expanded Modal */}
-        <BandMemberModal member={selectedMember} onClose={() => setSelectedMember(null)} />
+        <BandMemberModal
+          member={selectedMember}
+          onClose={() => setSelectedMember(null)}
+        />
       </div>
+      {/* on smaller or mobile screen there is left and right arrow to navigate changes his default blue color to white. */}
+      <style>
+        {`
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: white !important;
+    }
+  `}
+      </style>
     </section>
   );
 };
