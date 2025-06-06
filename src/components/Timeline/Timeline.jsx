@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { FaGuitar, FaAward, FaCompactDisc, FaStar, FaTrophy, FaGlobe } from "react-icons/fa";
+import { FaGuitar, FaAward, FaCompactDisc, FaGlobe } from "react-icons/fa";
 
 const Timeline = () => {
   const milestones = [

@@ -13,7 +13,7 @@ const Navbar = ({ isMenuOpen, setIsMenuOpen, activeSection }) => {
       </a>
 
       <div className="hidden md:flex space-x-6">
-        {["home", "about", "media", "discography", "events"].map((item) => (
+        {["home", "about", "media", "journey",  "events"].map((item) => (
           <a
             key={item}
             href={`#${item}`}
