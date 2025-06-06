@@ -64,7 +64,6 @@ const BookingForm = ({ onClose }) => {
         }
       );
       console.log("Response from server:", response.data);
-      sessionStorage.setItem("bookingConfirmed", "true");
       navigate("/confirmation");
     } catch (error) {
       console.error("Error submitting form:", error);
