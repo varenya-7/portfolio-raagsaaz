@@ -16,7 +16,9 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen, activeSection }) => {
               <a
                 key={item}
                 href={`#${item}`}
-                className={`capitalize ${activeSection === item ? "text-white" : "text-gray-400"} hover:text-white transition-colors`}
+                className={`capitalize ${
+                  activeSection === item ? "text-white" : "text-gray-400"
+                } hover:text-white transition-colors`}
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item}
@@ -30,4 +32,3 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen, activeSection }) => {
 };
 
 export default MobileMenu;
-
