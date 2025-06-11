@@ -12,7 +12,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen, activeSection }) => {
           className="md:hidden bg-black"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            {["home", "about", "media", "discography", "events"].map((item) => (
+            {["home", "about", "media", "journey", "events"].map((item) => (
               <a
                 key={item}
                 href={`#${item}`}

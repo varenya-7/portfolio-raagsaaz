@@ -36,7 +36,7 @@ const Timeline = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-zinc-800 py-12 px-4 sm:px-6 lg:px-8">
+    <div id= "journey" className="min-h-screen bg-zinc-800 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-white text-center mb-16">Our Journey</h1>
         <div className="relative">
