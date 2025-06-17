@@ -57,7 +57,7 @@ const BookingForm = ({ onClose }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/booking/submitform",
+        "http://raagsaaz-env.eba-yypwrumm.ap-south-1.elasticbeanstalk.com/api/booking/submitform",
         {
           ...data,
           phonenumber: formData.get("countrycode") + " " + rawPhone,
